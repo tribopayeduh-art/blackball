@@ -79,7 +79,7 @@ export function AppHeader({
             className="platform-brand min-w-0 h-10 flex items-center justify-center select-none"
             aria-label="Início"
           >
-            <img src="/brand/black-ball-logo.svg" alt="Black Ball" width="175" height="40" className="platform-brand__logo" />
+            <img src="/brand/black-ball-logo-v2.svg" alt="Black Ball" width="175" height="40" className="platform-brand__logo" />
           </Link>
 
           {/* Direita: saldo + depositar */}
