@@ -1,0 +1,110 @@
+:root {
+  color-scheme: dark;
+  --arena-background: url("assets/img/bgArena-ruby-v2.png");
+  --arena-position: center center;
+}
+
+html,
+body {
+  width: 100% !important;
+  height: 100% !important;
+  min-width: 100% !important;
+  min-height: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  overflow: hidden !important;
+  background-color: #130005 !important;
+  background-image: var(--arena-background) !important;
+  background-position: var(--arena-position) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+}
+
+body > center,
+#mygame {
+  display: flex !important;
+  width: 100vw !important;
+  height: 100dvh !important;
+  max-width: none !important;
+  max-height: none !important;
+  margin: 0 !important;
+  align-items: center !important;
+  justify-content: center !important;
+  background-color: transparent !important;
+  background-image: var(--arena-background) !important;
+  background-position: var(--arena-position) !important;
+  background-repeat: no-repeat !important;
+  background-size: cover !important;
+}
+
+#mygame canvas {
+  display: block !important;
+  max-width: 100vw !important;
+  max-height: 100dvh !important;
+  margin: auto !important;
+}
+
+#mygame canvas {
+  filter: drop-shadow(0 18px 28px rgba(45, 0, 8, 0.48));
+  animation: arena-table-arrival 620ms cubic-bezier(0.2, 0.9, 0.25, 1) both;
+}
+
+html[data-theme="london"],
+html[data-theme="london"] body {
+  --arena-background: url("assets/img/bgArena-london-v2.png");
+  --arena-position: center center;
+  background-color: #050914 !important;
+}
+
+html[data-theme="vegas"],
+html[data-theme="vegas"] body {
+  --arena-background: url("assets/img/bgArena-vegas-v2.png");
+  --arena-position: center center;
+  background-color: #08001a !important;
+}
+
+/* Keep the panorama edge-to-edge in short, extra-wide phone viewports. */
+@media (orientation: landscape) and (max-height: 600px) {
+  html,
+  body,
+  body > center,
+  #mygame {
+    width: 100vw !important;
+    height: 100dvh !important;
+    min-width: 100vw !important;
+    min-height: 100dvh !important;
+    background-size: cover !important;
+  }
+}
+
+html[data-theme="london"] #mygame canvas {
+  filter: drop-shadow(0 18px 32px rgba(3, 12, 35, 0.72));
+}
+
+html[data-theme="vegas"] #mygame canvas {
+  filter: drop-shadow(0 18px 34px rgba(132, 20, 255, 0.5));
+}
+
+@keyframes arena-table-arrival {
+  from {
+    opacity: 0;
+    transform: scale(0.975) translateY(12px);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  #mygame canvas {
+    animation: none;
+  }
+}
+
+@supports not (height: 100dvh) {
+  body > center,
+  #mygame {
+    height: 100vh !important;
+  }
+  #mygame canvas {
+    max-height: 100vh !important;
+  }
+}

@@ -1,0 +1,29 @@
+<html lang="pt-BR"><head><meta content="text/html;charset=utf-8" http-equiv="Content-Type" /><meta content="utf-8" http-equiv="encoding" /><meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, user-scalable=no, minimal-ui" /><title>Black Ball — Modo Local</title>
+<link rel="preload" as="script" href="html5games/gameapi/v1.js" />
+<link rel="preload" as="script" href="html5games/gameapi/zepto.min.js" />
+<link rel="preload" as="script" href="html5games/gameapi/detection.js" />
+<link rel="preload" as="script" href="html5games/gameapi/famobi_analytics_v1.js" />
+<link rel="preload" as="script" href="html5games/gameapi/fenster.js" />
+<link rel="preload" as="script" href="assets/src/01phaser.js" />
+<link rel="preload" as="script" href="assets/src/02Ball.js" />
+<link rel="preload" as="script" href="assets/src/03contactListener.js" />
+<link rel="preload" as="script" href="assets/src/04billiardPhysics.js" />
+<link rel="preload" as="script" href="assets/src/05levelData.js" />
+<link rel="preload" as="script" href="assets/src/06maths.js" />
+<link rel="preload" as="script" href="assets/src/07vector2d.js" />
+<link rel="preload" as="script" href="assets/src/08render.js" />
+<link rel="preload" as="script" href="assets/src/09sound.js" />
+<link rel="preload" as="script" href="assets/src/10effects.js" />
+<link rel="preload" as="script" href="assets/src/11timer.js" />
+<link rel="preload" as="script" href="assets/src/12load.js" />
+<link rel="preload" as="script" href="assets/src/13mainMenu.js" />
+<link rel="preload" as="script" href="assets/src/14setup.js" />
+<link rel="preload" as="script" href="assets/src/15gameController.js" />
+<link rel="preload" as="script" href="assets/src/16boot.js" />
+<link rel="preload" as="fetch" href="famobi.json" crossorigin="anonymous" />
+<link rel="preload" as="style" href="html5games/gameapi/v1/play.css" />
+<link rel="stylesheet" href="cue-selector.css" />
+<link rel="stylesheet" href="ruby-theme.css" />
+<script src="cue-catalog.js"></script>
+<script src="cue-selector.js"></script>
+<script>window.gameID="8-ball-billiards-classic"; window.gameJS=[ "assets/src/01phaser.js", "assets/src/02Ball.js", "assets/src/03contactListener.js", "assets/src/04billiardPhysics.js", "assets/src/05levelData.js", "assets/src/06maths.js", "assets/src/07vector2d.js", "assets/src/08render.js", "assets/src/09sound.js", "assets/src/10effects.js", "assets/src/11timer.js", "assets/src/12load.js", function (){ if(!window.loadState)return; var originalPreload=window.loadState.preload; window.loadState.preload=function(){ var loader=this.load; var originalImage=loader.image; loader.image=function(key,url){ if(key==="cue")arguments[1]="assets/img/cues/"+(window.blackBallCueSkin||"starter")+".png"; return originalImage.apply(loader,arguments); }; loader.image("bbBotCue","assets/img/cues/"+(window.blackBallBotCueSkin||"oak")+".png"); try{return originalPreload.apply(this,arguments);}finally{loader.image=originalImage;} }; window.loadState.create=function(){ var info=this.loaderInfo; function openMainMenu(){ window.projectInfo.levelComplete=false; window.game.state.start("mainMenu"); } try{ if(info&&info.loaderCanvas){ info.loaderCanvas.alpha=0; info.loaderCanvas.visible=false; } }catch(error){} if(window.game&&window.game.time&&window.game.time.events){ window.game.time.events.add(1, openMainMenu, this); } else { openMainMenu(); } }; }, "assets/src/13mainMenu.js", "assets/src/14setup.js", "assets/src/15gameController.js", "gameplay-enhancements.js", "assets/src/16boot.js", function (){}, ]; (function (document, url, fgJS, firstJS){ fgJS=document.createElement("script"); firstJS=document.getElementsByTagName("script")[0]; fgJS.src=url + ""; firstJS.parentNode.insertBefore(fgJS, firstJS);})(document, "html5games/gameapi/v1.js"); </script></head><body><center><div id="mygame"></div></center></body></html>

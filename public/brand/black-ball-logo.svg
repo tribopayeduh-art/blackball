@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 420 96" role="img" aria-labelledby="title desc">
+  <title id="title">Black Ball</title>
+  <desc id="desc">Marca Black Ball com bola oito e detalhe dourado</desc>
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#f2d47a"/><stop offset="1" stop-color="#a87524"/></linearGradient>
+    <linearGradient id="w" x1="0" y1="0" x2="0" y2="1"><stop stop-color="#fff"/><stop offset="1" stop-color="#b7bec8"/></linearGradient>
+    <filter id="s" x="-30%" y="-30%" width="160%" height="160%"><feGaussianBlur stdDeviation="3" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+  </defs>
+  <path d="M12 67h116" stroke="url(#g)" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+  <text x="10" y="61" fill="url(#w)" font-family="Arial Black,Arial,sans-serif" font-style="italic" font-size="49" font-weight="900" letter-spacing="-3">BLACK</text>
+  <g transform="translate(151 8)" filter="url(#s)">
+    <circle cx="40" cy="40" r="37" fill="#050608" stroke="url(#g)" stroke-width="4"/>
+    <circle cx="40" cy="40" r="18" fill="#f7f7f5"/>
+    <text x="40" y="51" text-anchor="middle" fill="#08090b" font-family="Arial Black,Arial,sans-serif" font-size="30" font-weight="900">8</text>
+    <path d="M18 7 27 1l7 9 7-10 8 10 8-9 7 6-5 9H22z" fill="url(#g)"/>
+  </g>
+  <path d="M254 67h154" stroke="url(#g)" stroke-width="4" stroke-linecap="round" opacity=".8"/>
+  <text x="239" y="61" fill="url(#g)" font-family="Arial Black,Arial,sans-serif" font-style="italic" font-size="49" font-weight="900" letter-spacing="-3">BALL</text>
+</svg>
